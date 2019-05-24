@@ -42,8 +42,10 @@ public class MainActivity extends AppCompatActivity {
         button_intent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+
                 Intent intent = new Intent("com.example.luis.work_1.MainActivity.ACTION_INTENT");
+                String data = new String("我是返回的数据");
+                intent.putExtra("extra_data", data);
                 startActivity(intent);
             }
         });
